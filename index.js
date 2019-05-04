@@ -27,7 +27,31 @@ restService.post("/echoV2", function(req, res) {
   }else{
       speech = "Seems like some problem. Speak again.";
   }
-      
+  
+ console.log(speech);
+  var transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: 'vibhutinarayan95@gmail.com',
+      pass: '8299471901'
+    }
+  });
+  
+  var mailOptions = {
+    from: 'saheb.bhowmick039@gmail.com',
+    to: 'vibhutinarayan995@gmail.com',
+    to: 'samir251290@gmail.com',
+    subject: 'Hello from!!',
+    text: speech
+  };
+  
+  transporter.sendMail(mailOptions, function(error, info){
+    if (error) {
+      console.log(error);
+    } else {
+      console.log('Email sent: ' + info.response);
+    }
+  });   
   return res.json({
     fulfillmentText: speech,
     fulfillmentMessages: [
