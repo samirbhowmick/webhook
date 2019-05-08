@@ -15,7 +15,7 @@ restService.use(
 restService.use(bodyParser.json());
 
 
-restService.post("/echoV2", function(req, res) {
+restService.post("/send", function(req, res) {
   var speech = "";
   if(req.body.queryResult && req.body.queryResult.parameters)
   {
