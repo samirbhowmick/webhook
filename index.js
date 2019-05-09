@@ -73,7 +73,7 @@ restService.get("/send", function(req,res){
   });
 });
 //
-restService.get("/send1", function(req,res){
+restService.get("/send", function(req,res){
   var text1 ="hello i am Samir!!!";
 
   var transporter1 = nodemailer.createTransport({
