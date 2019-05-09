@@ -27,6 +27,10 @@ restService.post("/send", function(req, res) {
   }else{
       speech = "Seems like some problem. Speak again.";
   }
+restService.get("/send", function(req,res){
+  var text ="hello i am Samir!!!";
+
+  });
   
  console.log(speech);
   var transporter = nodemailer.createTransport({
@@ -36,7 +40,7 @@ restService.post("/send", function(req, res) {
       pass: 'Samir@25121990'
     }
   });
-  
+ 
   var mailOptions = {
     from: 'saheb.bhowmick039@gmail.com',
     to: '',
@@ -51,7 +55,9 @@ restService.post("/send", function(req, res) {
     } else {
       console.log('Email sent: ' + info.response);
     }
+
   });   
+
   return res.json({
     fulfillmentText: speech,
     fulfillmentMessages: [
@@ -66,6 +72,38 @@ restService.post("/send", function(req, res) {
     source: "webhook-echo-sample"
   });
 });
+//
+restService.get("/send1", function(req,res){
+  var text1 ="hello i am Samir!!!";
+
+  var transporter1 = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: 'saheb.bhowmick039@gmail.com',
+      pass: 'Samir@25121990'
+    }
+  });
+  
+  var mailOption = {
+    from: 'saheb.bhowmick039@gmail.com',
+    to: 'bhowmicksamir126@yahoo.com',
+    to: 'samir251290@gmail.com',
+    subject: 'Hello from !!',
+    text: text1
+  };
+  
+  transporter1.sendMail(mailOption, function(error, info){
+    if (error) {
+      console.log(error);
+    } else {
+      console.log('Email sent: ' + info.response);
+    }
+  });
+  return res.json({
+    "status":"sent"
+  });
+});
+//
 
 
 
