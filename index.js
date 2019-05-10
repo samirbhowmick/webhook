@@ -23,7 +23,10 @@ restService.post("/send", function(req, res) {
       speech = req.body.queryResult.parameters.mail;
     if(req.body.queryResult.parameters.message)
       speech +=req.body.queryResult.parameters.message; 
-    
+    if(req.body.queryResult.parameters.device)
+      speech +=req.body.queryResult.parameters.device+" "; 
+    if(req.body.queryResult.parameters.status)
+      speech +=req.body.queryResult.parameters.status;
     
   }else{
       speech = "Seems like some problem. Speak again.";
