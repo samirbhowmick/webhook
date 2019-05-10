@@ -31,10 +31,7 @@ restService.post("/send", function(req, res) {
   }else{
       speech = "Seems like some problem. Speak again.";
   }
-restService.get("/send", function(req,res){
-  var text ="hello i am Samir!!!";
 
-  });
   
  console.log(speech);
   var transporter = nodemailer.createTransport({
