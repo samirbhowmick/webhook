@@ -38,7 +38,7 @@ restService.post("/send", function(req, res) {
     service: 'gmail',
     auth: {
       user: 'saheb.bhowmick039@gmail.com',
-      pass: 'Samir@25121990'
+      pass: 'Samir@arun!23'
     }
   });
  
@@ -81,7 +81,7 @@ restService.get("/send", function(req,res){
     service: 'gmail',
     auth: {
       user: 'saheb.bhowmick039@gmail.com',
-      pass: 'Samir@25121990'
+      pass: 'Samir@arun!23'
     }
   });
   
