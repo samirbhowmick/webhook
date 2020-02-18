@@ -38,13 +38,13 @@ restService.post("/send", function(req, res) {
     service: 'gmail',
     auth: {
       user: 'saheb.bhowmick039@gmail.com',
-      pass: 'Samir@arun!23'
+      pass: 'passwd@gmail19'
     }
   });
  
   var mailOptions = {
     from: 'saheb.bhowmick039@gmail.com',
-    to: '',
+    to: 'bhowmicksamir126@yahoo.com',
     to: 'samir251290@gmail.com',
     subject: 'Hello from!!',
     text: speech
